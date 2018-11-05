@@ -10,12 +10,24 @@
   <lastmod>2018-11-05T15:14:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://withcoding.github.io/categories/cat_shu-xue.xml</loc>
+  <lastmod>2018-11-05T15:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://withcoding.github.io/categories/cat_za-wen.xml</loc>
   <lastmod>2018-11-05T15:14:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://withcoding.github.io/categories/gai-lu-lun.xml</loc>
+  <lastmod>2018-11-05T15:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://withcoding.github.io/categories/python.xml</loc>
   <lastmod>2018-11-05T15:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://withcoding.github.io/categories/shu-xue.xml</loc>
+  <lastmod>2018-11-05T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://withcoding.github.io/categories/ubuntu.xml</loc>
@@ -31,10 +43,10 @@
  </sitemap>
  <sitemap>
   <loc>https://withcoding.github.io/rss.xml</loc>
-  <lastmod>2018-11-05T15:14:00Z</lastmod>
+  <lastmod>2018-11-05T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://withcoding.github.io/sitemap.xml</loc>
-  <lastmod>2018-11-05T15:14:00Z</lastmod>
+  <lastmod>2018-11-05T15:53:00Z</lastmod>
  </sitemap>
 </sitemapindex>

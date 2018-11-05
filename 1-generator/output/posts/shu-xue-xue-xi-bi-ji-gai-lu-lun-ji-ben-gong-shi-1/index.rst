@@ -1,8 +1,8 @@
 .. title: 数学学习笔记——概率论基本公式1
 .. slug: shu-xue-xue-xi-bi-ji-gai-lu-lun-ji-ben-gong-shi-1
 .. date: 2018-11-05 23:11:37 UTC+08:00
-.. tags: 
-.. category: 
+.. tags: 概率论, 数学
+.. category: 数学
 .. link: 
 .. description: 
 .. type: text

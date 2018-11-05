@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>与码为伴 (关于文章 概率论)</title><link>https://withcoding.github.io/</link><description></description><atom:link href="https://withcoding.github.io/categories/gai-lu-lun.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:withcoding@gmx.com"&gt;龙龙&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Nov 2018 15:53:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>数学学习笔记——概率论基本公式1</title><link>https://withcoding.github.io/posts/shu-xue-xue-xi-bi-ji-gai-lu-lun-ji-ben-gong-shi-1/</link><dc:creator>龙龙</dc:creator><description>&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;任意一个事件发生的概率 &lt;span class="math"&gt;\(P(E \cup F) = P(E)+P(F)-P(EF)\)&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;条件概率公式 &lt;span class="math"&gt;\(P(E|F) = \frac{P(EF)}{P(F)}\)&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;如果 &lt;span class="math"&gt;\(P(EF)=P(E)P(F)\)&lt;/span&gt;，那么两个事件E和F称为独立的。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;设E和F是事件，我们可以将E表示为 &lt;span class="math"&gt;\(E=EF \cup EF^c\)&lt;/span&gt;，&lt;/div&gt;
+&lt;div class="line"&gt;所以我们有 &lt;span class="math"&gt;\(P(E)=P(EF)+P(EF^c)=P(E|F)P(F)+P(E|F^c)(1-P(F))\)&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;贝叶斯公式 &lt;span class="math"&gt;\(P(F_j|E)= \frac{P(EF_j)}{P(E)} = \frac{P(E|F_j)P(F_j)} {\sum_{i=1}^{n}P(E|F_i)P(F_i)}\)&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><category>数学</category><category>概率论</category><guid>https://withcoding.github.io/posts/shu-xue-xue-xi-bi-ji-gai-lu-lun-ji-ben-gong-shi-1/</guid><pubDate>Mon, 05 Nov 2018 15:11:37 GMT</pubDate></item></channel></rss>
