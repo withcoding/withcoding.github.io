@@ -1,0 +1,4 @@
+Sitemap: https://withcoding.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: withcoding.github.io
