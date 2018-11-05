@@ -15,15 +15,27 @@
  </url>
  <url>
   <loc>https://withcoding.github.io/archive.html</loc>
-  <lastmod>2018-11-05T12:50:00Z</lastmod>
+  <lastmod>2018-11-05T13:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://withcoding.github.io/categories/</loc>
-  <lastmod>2018-11-05T12:50:00Z</lastmod>
+  <lastmod>2018-11-05T13:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://withcoding.github.io/categories/cat_python/</loc>
+  <lastmod>2018-11-05T13:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://withcoding.github.io/categories/cat_za-wen/</loc>
   <lastmod>2018-11-05T12:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://withcoding.github.io/categories/python/</loc>
+  <lastmod>2018-11-05T13:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://withcoding.github.io/categories/ubuntu/</loc>
+  <lastmod>2018-11-05T13:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://withcoding.github.io/categories/za-wen/</loc>
@@ -36,6 +48,10 @@
  <url>
   <loc>https://withcoding.github.io/listings/</loc>
   <lastmod>2018-11-05T12:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://withcoding.github.io/posts/ubuntuzi-dong-xia-zai-bingmei-ri-yi-tu-bing-zi-dong-huan-bi-zhi/</loc>
+  <lastmod>2018-11-05T13:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://withcoding.github.io/posts/yu-ma-wei-ban/</loc>

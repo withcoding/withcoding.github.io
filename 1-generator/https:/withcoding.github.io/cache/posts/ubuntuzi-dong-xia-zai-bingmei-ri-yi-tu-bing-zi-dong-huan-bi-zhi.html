@@ -1,0 +1,79 @@
+<p>基本的逻辑部分。</p>
+<pre class="literal-block">
+&gt;&gt; emacs /usr/local/bin/switchwallpaper.py
+</pre>
+<table class="codetable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-1"> 1</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-2"> 2</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-3"> 3</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-4"> 4</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-5"> 5</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-6"> 6</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-7"> 7</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-8"> 8</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-9"> 9</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-10">10</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-11">11</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-12">12</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-13">13</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-14">14</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-15">15</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-16">16</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-17">17</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-18">18</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-19">19</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-20">20</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-21">21</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-22">22</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-23">23</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-24">24</a>
+<a href="#rest_code_9820d10a8f474f6ba906bf3063fa75ec-25">25</a></pre></div></td><td class="code"><pre class="code python"><a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-2"></a><span class="kn">import</span> <span class="nn">time</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-3"></a><span class="kn">import</span> <span class="nn">os</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-4"></a><span class="kn">import</span> <span class="nn">random</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-5"></a>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-6"></a><span class="n">img_url</span> <span class="o">=</span> <span class="s2">&quot;https://area.sinaapp.com/bingImg/&quot;</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-7"></a><span class="n">date</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-8"></a><span class="n">year</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">tm_year</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-9"></a><span class="n">month</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">tm_mon</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-10"></a><span class="n">day</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">tm_mday</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-11"></a><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;bing_</span><span class="si">%s</span><span class="s2">_</span><span class="si">%s</span><span class="s2">_</span><span class="si">%s</span><span class="s2">.jpg&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-12"></a><span class="n">wallpaperdir</span> <span class="o">=</span> <span class="s2">&quot;/home/long/wallpapers/&quot;</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-13"></a>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-14"></a><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wallpaperdir</span> <span class="o">+</span> <span class="n">filename</span><span class="p">):</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-15"></a>    <span class="k">pass</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-16"></a><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-17"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">img_url</span><span class="p">)</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-18"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">wallpaperdir</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-19"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-20"></a>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-21"></a><span class="n">filelist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">wallpaperdir</span><span class="p">)</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-22"></a><span class="n">aimfile</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">filelist</span><span class="p">)</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-23"></a>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-24"></a><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;/usr/bin/gsettings set org.gnome.desktop.background picture-uri &#39;file://&quot;</span> <span class="o">+</span>
+<a name="rest_code_9820d10a8f474f6ba906bf3063fa75ec-25"></a>          <span class="n">wallpaperdir</span><span class="o">+</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">aimfile</span><span class="p">)</span>
+</pre></td></tr></table><p><strong>ps</strong> 需要格外注意的是最后一行代码，也就是gsettings的使用。</p>
+<p>系统命令部分</p>
+<pre class="literal-block">
+&gt;&gt; emacs /usr/bin/switcher
+</pre>
+<table class="codetable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_7e174880bd8a42ce906cb42a15184126-1">1</a>
+<a href="#rest_code_7e174880bd8a42ce906cb42a15184126-2">2</a>
+<a href="#rest_code_7e174880bd8a42ce906cb42a15184126-3">3</a>
+<a href="#rest_code_7e174880bd8a42ce906cb42a15184126-4">4</a>
+<a href="#rest_code_7e174880bd8a42ce906cb42a15184126-5">5</a>
+<a href="#rest_code_7e174880bd8a42ce906cb42a15184126-6">6</a></pre></div></td><td class="code"><pre class="code shell"><a name="rest_code_7e174880bd8a42ce906cb42a15184126-1"></a><span class="ch">#!/bin/sh</span>
+<a name="rest_code_7e174880bd8a42ce906cb42a15184126-2"></a>
+<a name="rest_code_7e174880bd8a42ce906cb42a15184126-3"></a><span class="nv">PID</span><span class="o">=</span><span class="k">$(</span>pgrep gnome-session <span class="p">|</span> tail -n1<span class="k">)</span>
+<a name="rest_code_7e174880bd8a42ce906cb42a15184126-4"></a><span class="nb">export</span> <span class="nv">DBUS_SESSION_BUS_ADDRESS</span><span class="o">=</span><span class="k">$(</span>grep -z DBUS_SESSION_BUS_ADDRESS /proc/<span class="nv">$PID</span>/environ<span class="p">|</span>cut -d<span class="o">=</span> -f2-<span class="k">)</span>
+<a name="rest_code_7e174880bd8a42ce906cb42a15184126-5"></a>
+<a name="rest_code_7e174880bd8a42ce906cb42a15184126-6"></a>python3 /usr/local/bin/switchwallpaper.py
+</pre></td></tr></table><p><strong>ps</strong> 中间的两句是关键，如果没有中间的两句，无法实现命令行切换壁纸。</p>
+<pre class="literal-block">
+&gt;&gt; sudo crontab -u long -e
+</pre>
+<table class="codetable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#rest_code_902b4602f3174bff90aad9bdb759ab25-1">1</a></pre></div></td><td class="code"><pre class="code shell"><a name="rest_code_902b4602f3174bff90aad9bdb759ab25-1"></a>*/10 * * * * /usr/bin/switcher
+</pre></td></tr></table><p><strong>ps</strong> 用于设置每10分钟执行一次。</p>
+<p>最后展示一下效果 ^O^</p>
+<blockquote>
+<img alt="/1-pics/bg1.png" src="/1-pics/bg1.png" />
+</blockquote>
